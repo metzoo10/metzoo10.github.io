@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio | Mouhamed BA</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+	</head>
+
+	<body>
+
+		<!-- div principale -->
+		<div class="container">
+			<div class="img-container">
+				<img src="img/img-1.jpg" alt="img-avatar">
+			</div>
+			<div class="content">
+				<h1>Hey &#128075;, je suis <span>Mouhamed</span>.</h1>
+				<h3>Étudiant en développement web, designer à ses heures perdues et touche-à-tout.</h3>
+			</div>
+			<div class="link-container">
+				<a href="#a-propos" class="link-arrow">à propos</a>
+				<a href="#competences" class="link-arrow">compétences</a>
+				<a href="#centre-interet" class="link-arrow">centres d'intérêt</a>
+			</div>
+			<div class="social">
+				<a href="#"><i class="fa-brands fa-github"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="#"><i class="fa-solid fa-envelope"></i></a>
+			</div>
+		</div>
+		<br>
+
+		<!-- div à propos -->
+		<div class="container content">
+			<h1 id="a-propos">À Propos</h1>
+			<div class="column">
+				<p>Étudiant passionné par le développement web et le design, je suis constamment à la recherche de nouvelles façons d'apporter des solutions créatives et efficaces aux défis technologiques. Ma curiosité innée et mon désir d'apprendre me poussent à explorer les dernières tendances et technologies du domaine.</p>
+				<img src="img/img-2.jpg" width="340px" alt="Photo de moi planchant sur mon ordinateur.">
+			</div>
+		</div>
+		<br>
+
+		<!--div compétences -->
+		<div class="container content">
+			<h1 id="competences">Compétences</h1>
+			<div class="column-2">
+				<div>
+					<h3>Compétences professionnelles</h3>
+					<ul>
+						<li>Fortes compétences en communication et en collaboration</li>
+						<li>Capacité à travailler efficacement en équipe</li>
+					</ul>
+				</div>
+				<div class="second-column">
+					<h3>Langages & frameworks</h3>
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Boostrap 5</li>
+						<li>PHP</li>
+						<li>SQL</li>
+						<li>Ionic</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<h3>Autres compétences</h3>
+				<ul>
+					<li>Maîtrise des logiciels de base tels que : Gmail, Excel, Word, Github, etc.</li>
+					<li>Bonne connaissance de logiciels de conception graphique Canva et Figma.</li>
+				</ul>
+			</div>
+		</div>
+		<br>
+
+		<!-- div centres d'intérêt -->
+		<div class="container content">
+			<h1 id="centre-interet">Centres d'intérêt</h1>
+			<div class="column">
+				<p>Le football est bien plus qu'un simple sport, c'est une véritable passion partagée par des millions de personnes à travers le monde. Et j'en fais partie de ces millions de fanatiques &#128525;. Ce côté palpitant de suivre un match, l'atmosphère, les débats avant, pendant et après le match, fait de ce sport une véritable passion pour moi où j'en parlerais des heures et des heures.</p>
+				<img src="img/football.png" width="150px" alt="Photo d'un ballon de football.">
+			</div>
+			<br>
+			<div class="column-2">
+				<img src="img/book.png" width="150px" alt="Photo d'une main tenant un livre.">
+				<p>La littérature offre un voyage à travers les mots et les idées, permettant de découvrir des mondes imaginaires, de comprendre des perspectives diverses et d'enrichir son esprit. Lire une oeuvre est comme ouvrir une fenêtre vers l'imaginaire; se voir dans le décor, vivre intenssémment les histoires sous la peau des personnages.&#129464;</p>
+			</div>
+			<br>
+			<div class="column">
+				<p>Les jeux vidéos ont été une récente découverte pour moi. Ils me permettent de me plonger dans des univers fantastiques et de relever des défis stratégiques. Que ce soit pour le plaisir de l'exploration, le frisson de la compétition, ou la joie de la création, le gaming est une activité enrichissante et stimulante ! &#127918;</p>
+				<img src="img/gaming.jpeg" width="150px" alt="Photo d'une main tenant une manette de jeu.">
+			</div>
+		</div>
+		<br>
+		<!-- bouton mode dark -->
+		<div class="container">
+            <button id="toggle-dark-mode" class="toggle-button">
+            	<i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+	</body>
+
+	<script src="https://kit.fontawesome.com/1946a24281.js" crossorigin="anonymous"></script>
+	<script>
+		document.getElementById('toggle-dark-mode').addEventListener('click', function() {
+			document.body.classList.toggle('dark-mode');
+			this.classList.toggle('dark-mode');
+
+			const icon = this.querySelector('i');
+			if (document.body.classList.contains('dark-mode')) {
+				icon.classList.remove('fa-moon');
+				icon.classList.add('fa-sun');
+			} else {
+				icon.classList.remove('fa-sun');
+				icon.classList.add('fa-moon');
+			}
+		});
+	</script>
+
+</html>

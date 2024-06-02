@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+/* Style du corps du site */
+* {
+	font-family: "Source Sans 3", sans-serif;
+}
+.container {
+    margin: 0 auto;
+    width: 50%;
+}
+.column {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.column img {
+	margin-left: 20px;
+	border-radius: 5px;
+}
+.column-2 {
+	display: flex;
+    justify-content: space-between;
+}
+.column-2 .second-column {
+	margin-left: 12px;
+}
+li {
+	list-style: url("img/code-source.png");
+}
+.img-container {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 4px solid palegreen;
+	overflow: hidden;
+}
+.img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.content {
+	font-size: 16px;
+	font-weight: 400;
+	color: #515669;
+}
+span {
+	color: palegreen;
+}
+.link-container {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.link-container a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.link-container a:hover {
+    color: palegreen;
+    transform: scale(1.1);
+}
+.link-arrow::after {
+	content: '→';
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+.social {
+	display: flex;
+    justify-content: space-between;
+    width: 25%;
+    padding: 10px;	
+}
+.social i {
+	font-size: 20px;
+	color: palegreen;
+	transition: transform 0.3s ease;
+}
+.social i:hover {
+	transform: scale(1.1);
+}
+/* Styles du mode dark */
+body.dark-mode {
+	background-color: black;
+}
+body.dark-mode .content h3,
+body.dark-mode .content h2,
+body.dark-mode .content h1,
+body.dark-mode .content ul,
+body.dark-mode .content li,
+body.dark-mode a,
+body.dark-mode .content p {
+	color: #fff;
+}
+/* Styles du bouton toggle */
+.toggle-button {
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 30px;
+    color: palegreen;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-button.dark-mode {
+    background-color: #333;
+    color: palegreen;
+}
+
+/* Styles pour l'effet de bascule */
+.toggle-button i {
+    transition: transform 0.3s;
+}
+
+body.dark-mode .toggle-button i {
+    transform: rotate(180deg);
+}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    div ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    div ul {
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+	div ul {
+		padding-left: 10px;
+	}
+	.img-container{
+		margin-top: 20px;
+	}
+	.content {
+		flex-direction: column;
+		text-align: center;
+		padding-right: 0;
+	}
+}
